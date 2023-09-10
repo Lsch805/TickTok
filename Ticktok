@@ -1,0 +1,23 @@
+import time
+
+def focus_timer(minutes):
+    # 将分钟转换为秒数
+    seconds = minutes * 60
+    
+    print(f"专注时间开始，共计 {minutes} 分钟.")
+    
+    # 倒计时循环
+    while seconds > 0:
+        # 显示倒计时剩余时间
+        print(f"剩余时间：{seconds // 60} 分钟 {seconds % 60} 秒")
+        
+        # 每秒减少1
+        seconds -= 1
+        
+        # 延时1秒
+        time.sleep(1)
+    
+    print("专注时间结束！")
+
+# 设置专注时间为15分钟
+focus_timer(15)
